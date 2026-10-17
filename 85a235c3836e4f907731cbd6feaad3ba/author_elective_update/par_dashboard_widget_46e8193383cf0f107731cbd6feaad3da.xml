@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">497b38f383cb0f107731cbd6feaad3fe</canvas>
+        <component display_value="Vertical bar">23051643b7e03010097cb81cde11a910</component>
+        <component_props>{"selectedElements":[],"configVersion":"23.0.0-ci-SNAPSHOT","chartVariation":"stacked","yAxisTitle":"No.of Records","yAxisPosition":"bottom","yAxisShowGrid":true,"xAxisWrapLabels":false,"xAxisMaxLabelSize":100,"showClosestSeriesOnHover":true,"xAxisTruncationType":"end","yAxisStyle":"clean","showLegend":true,"showLegendValue":true,"legendPosition":"bottom","legendHorizontalAlignment":"center","legendExpandToFit":false,"showDataLabels":false,"dataLabelPosition":"above","showStackedValues":"none","showOverlappingLabels":false,"yAxisHidden":false,"xAxisHidden":true,"rangesConfig":{},"colorConfig":{"type":"palette","palette":"c28570cc9fac73001bb9baac757fcf01"},"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Incident Handoff Review","sourceType":"table","tableOrViewName":"x_1880631_incide_0_incident_handoff_review","filterQuery":"review_status=pending^ORreview_status=under_review","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzE4ODA2MzFfaW5jaWRlXzBfaW5jaWRlbnRfaGFuZG9mZl9yZXZpZXcxNzg4Nzg0Mzg2NTEx","dataCategories":["trend","group","simple"]}],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"lineClamp":1,"wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":false,"contextMenuActions":[],"headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"metrics":[{"dataSource":"dGFibGV4XzE4ODA2MzFfaW5jaWRlXzBfaW5jaWRlbnRfaGFuZG9mZl9yZXZpZXcxNzg4Nzg0Mzg2NTEx","id":"ZEdGaWJHVjRYekU0T0RBMk16RmZhVzVqYVdSbFh6QmZhVzVqYVdSbGJuUmZhR0Z1Wkc5bVpsOXlaWFpwWlhjeE56ZzROemcwTXpnMk5URXgxNzg4Nzg0MzkwNDAy","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzE4ODA2MzFfaW5jaWRlXzBfaW5jaWRlbnRfaGFuZG9mZl9yZXZpZXcxNzg4Nzg0Mzg2NTEx","groupByField":"review_status","isRange":false,"isChoice":true,"isPaBucket":false}],"maxNumberOfGroups":"ALL","numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":false,"hideZeroValues":false,"disableRanges":false}],"filterPerMetric":[],"sortBy":"value","sortByOrder":"desc","trendBy":null,"showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":false,"enableCustomEmptyState":false,"componentId":"4u04cl5g","emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","refreshFrequency":null,"hideDevSettings":false,"configPropModifiers":{},"filterConfigurations":"@state.parFilters","showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"scoreType":null,"showChangeFrom":"previous","useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","sharedContext":null,"colors":{}}</component_props>
+        <h>14</h>
+        <name/>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-07 14:26:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>46e8193383cf0f107731cbd6feaad3da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Incident Handoff Review and Escalation" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review and Escalation">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name>par_dashboard_widget_46e8193383cf0f107731cbd6feaad3da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-07 14:26:18</sys_updated_on>
+        <visualization/>
+        <w>17</w>
+        <widget_props/>
+        <x>19</x>
+        <y>0</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</application>
+        <file_path/>
+        <instance_id>97395eb0dbd635d8f697684e1396196a</instance_id>
+        <instance_name>dev200526</instance_name>
+        <name>par_dashboard_widget_46e8193383cf0f107731cbd6feaad3da</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">497b38f383cb0f107731cbd6feaad3fe</canvas><component display_value="Vertical bar">23051643b7e03010097cb81cde11a910</component><component_props>{"selectedElements":[],"configVersion":"23.0.0-ci-SNAPSHOT","chartVariation":"stacked","yAxisTitle":"No.of Records","yAxisPosition":"bottom","yAxisShowGrid":true,"xAxisWrapLabels":false,"xAxisMaxLabelSize":100,"showClosestSeriesOnHover":true,"xAxisTruncationType":"end","yAxisStyle":"clean","showLegend":true,"showLegendValue":true,"legendPosition":"bottom","legendHorizontalAlignment":"center","legendExpandToFit":false,"showDataLabels":false,"dataLabelPosition":"above","showStackedValues":"none","showOverlappingLabels":false,"yAxisHidden":false,"xAxisHidden":true,"rangesConfig":{},"colorConfig":{"type":"palette","palette":"c28570cc9fac73001bb9baac757fcf01"},"newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Incident Handoff Review","sourceType":"table","tableOrViewName":"x_1880631_incide_0_incident_handoff_review","filterQuery":"review_status=pending^ORreview_status=under_review","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzE4ODA2MzFfaW5jaWRlXzBfaW5jaWRlbnRfaGFuZG9mZl9yZXZpZXcxNzg4Nzg0Mzg2NTEx","dataCategories":["trend","group","simple"]}],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"lineClamp":1,"wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":false,"contextMenuActions":[],"headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"metrics":[{"dataSource":"dGFibGV4XzE4ODA2MzFfaW5jaWRlXzBfaW5jaWRlbnRfaGFuZG9mZl9yZXZpZXcxNzg4Nzg0Mzg2NTEx","id":"ZEdGaWJHVjRYekU0T0RBMk16RmZhVzVqYVdSbFh6QmZhVzVqYVdSbGJuUmZhR0Z1Wkc5bVpsOXlaWFpwWlhjeE56ZzROemcwTXpnMk5URXgxNzg4Nzg0MzkwNDAy","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzE4ODA2MzFfaW5jaWRlXzBfaW5jaWRlbnRfaGFuZG9mZl9yZXZpZXcxNzg4Nzg0Mzg2NTEx","groupByField":"review_status","isRange":false,"isChoice":true,"isPaBucket":false}],"maxNumberOfGroups":"ALL","numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":false,"hideZeroValues":false,"disableRanges":false}],"filterPerMetric":[],"sortBy":"value","sortByOrder":"desc","trendBy":null,"showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":false,"enableCustomEmptyState":false,"componentId":"4u04cl5g","emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","refreshFrequency":null,"hideDevSettings":false,"configPropModifiers":{},"filterConfigurations":"@state.parFilters","showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"scoreType":null,"showChangeFrom":"previous","useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","sharedContext":null,"colors":{}}</component_props><h>14</h><name/><stored_component/><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-07 14:26:18</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>46e8193383cf0f107731cbd6feaad3da</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Incident Handoff Review and Escalation" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package><sys_policy/><sys_scope display_value="Incident Handoff Review and Escalation">85a235c3836e4f907731cbd6feaad3ba</sys_scope><sys_update_name>par_dashboard_widget_46e8193383cf0f107731cbd6feaad3da</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-07 14:26:18</sys_updated_on><visualization/><w>17</w><widget_props/><x>19</x><y>0</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>949619641</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>41a235c3836e4f907731cbd6feaad3c1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-07 14:26:18</sys_created_on>
+        <sys_id>0ee8193383cf0f107731cbd6feaad3dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a07c43462e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-07 14:26:18</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>cae81933b7cf0f1022a9204ec93a02dc</update_guid>
+        <update_guid_history>cae81933b7cf0f1022a9204ec93a02dc:949619641</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">e4ea9d3783cf0f107731cbd6feaad349</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-07 14:34:57</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>1e29b67d98b64ac085e711abc946b440</sys_id>
+        <sys_metadata>46e8193383cf0f107731cbd6feaad3da</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_scope_delete display_value="">0b5280aa1c68490985956c85d93a9321</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_46e8193383cf0f107731cbd6feaad3da</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_46e8193383cf0f107731cbd6feaad3da">0ee8193383cf0f107731cbd6feaad3dd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-07 14:34:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

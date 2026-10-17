@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-07 10:31:22</sys_created_on>
+        <sys_id>97e228b3830b0f107731cbd6feaad3db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1880631_incide_0_incident_handoff_review.x_1880631_incide_0.user</sys_name>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_security_acl display_value="x_1880631_incide_0_incident_handoff_review">5529dacf83628f907731cbd6feaad315</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_97e228b3830b0f107731cbd6feaad3db</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-07 10:31:22</sys_updated_on>
+        <sys_user_role display_value="x_1880631_incide_0.user" name="x_1880631_incide_0.user">59a235c3836e4f907731cbd6feaad3f1</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

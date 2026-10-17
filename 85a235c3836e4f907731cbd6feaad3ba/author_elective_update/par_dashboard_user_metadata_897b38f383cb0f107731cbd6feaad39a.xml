@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_user_metadata">
+    <par_dashboard_user_metadata action="DELETE">
+        <background_color/>
+        <cache_expiration_time>24</cache_expiration_time>
+        <card_bg_image/>
+        <created_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</created_by_user>
+        <created_on>2026-09-07 12:17:38</created_on>
+        <dashboard display_value="Incident Handoff Review Dashboard">c97bb0b7838b0f107731cbd6feaad325</dashboard>
+        <edit_locked>{"sysId":"6816f79cc0a8016401c5a33be04be441","name":"System Administrator","avatar":"a5d3c898c3222010ae17dd981840dd8b.iix?t=small","lockedOn":"1788791432451"}</edit_locked>
+        <enable_data_cache>false</enable_data_cache>
+        <include_custom_insights>true</include_custom_insights>
+        <include_key_contributors>true</include_key_contributors>
+        <include_kpi_signals>true</include_kpi_signals>
+        <include_predictive_target>true</include_predictive_target>
+        <include_predictive_thresholds>true</include_predictive_thresholds>
+        <include_process_mining>true</include_process_mining>
+        <include_severity>true</include_severity>
+        <include_target>true</include_target>
+        <include_thresholds>true</include_thresholds>
+        <include_trends>true</include_trends>
+        <include_widget_notification>true</include_widget_notification>
+        <last_deactivated_on/>
+        <last_updated_on>2026-09-07 14:30:21</last_updated_on>
+        <po_project_id_list>[]</po_project_id_list>
+        <refresh_information>false</refresh_information>
+        <refresh_interval>-1</refresh_interval>
+        <requested_by_user/>
+        <schedule_repetition>false</schedule_repetition>
+        <show_insights_panel>true</show_insights_panel>
+        <sys_class_name>par_dashboard_user_metadata</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-07 12:17:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>897b38f383cb0f107731cbd6feaad39a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Incident Handoff Review and Escalation" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review and Escalation">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name>par_dashboard_user_metadata_897b38f383cb0f107731cbd6feaad39a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-07 14:30:32</sys_updated_on>
+        <updated_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</updated_by_user>
+        <use_custom_tab_colors>false</use_custom_tab_colors>
+        <widgets_margin>$now-global-space--sm</widgets_margin>
+    </par_dashboard_user_metadata>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</application>
+        <file_path/>
+        <instance_id>97395eb0dbd635d8f697684e1396196a</instance_id>
+        <instance_name>dev200526</instance_name>
+        <name>par_dashboard_user_metadata_897b38f383cb0f107731cbd6feaad39a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_user_metadata"><par_dashboard_user_metadata action="INSERT_OR_UPDATE"><background_color/><cache_expiration_time>24</cache_expiration_time><card_bg_image/><created_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</created_by_user><created_on>2026-09-07 12:17:38</created_on><dashboard display_value="Incident Handoff Review Dashboard">c97bb0b7838b0f107731cbd6feaad325</dashboard><edit_locked>{"sysId":"6816f79cc0a8016401c5a33be04be441","name":"System Administrator","avatar":"a5d3c898c3222010ae17dd981840dd8b.iix?t=small","lockedOn":"1788791432451"}</edit_locked><enable_data_cache>false</enable_data_cache><include_custom_insights>true</include_custom_insights><include_key_contributors>true</include_key_contributors><include_kpi_signals>true</include_kpi_signals><include_predictive_target>true</include_predictive_target><include_predictive_thresholds>true</include_predictive_thresholds><include_process_mining>true</include_process_mining><include_severity>true</include_severity><include_target>true</include_target><include_thresholds>true</include_thresholds><include_trends>true</include_trends><include_widget_notification>true</include_widget_notification><last_deactivated_on/><last_updated_on>2026-09-07 14:30:21</last_updated_on><po_project_id_list>[]</po_project_id_list><refresh_information>false</refresh_information><refresh_interval>-1</refresh_interval><requested_by_user/><schedule_repetition>false</schedule_repetition><show_insights_panel>true</show_insights_panel><sys_class_name>par_dashboard_user_metadata</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-07 12:17:38</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>897b38f383cb0f107731cbd6feaad39a</sys_id><sys_mod_count>5</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Incident Handoff Review and Escalation" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package><sys_policy/><sys_scope display_value="Incident Handoff Review and Escalation">85a235c3836e4f907731cbd6feaad3ba</sys_scope><sys_update_name>par_dashboard_user_metadata_897b38f383cb0f107731cbd6feaad39a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-07 14:30:32</sys_updated_on><updated_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</updated_by_user><use_custom_tab_colors>false</use_custom_tab_colors><widgets_margin>$now-global-space--sm</widgets_margin></par_dashboard_user_metadata></record_update>]]></payload>
+        <payload_hash>1851134343</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>41a235c3836e4f907731cbd6feaad3c1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-07 14:30:32</sys_created_on>
+        <sys_id>fbd91db383cf0f107731cbd6feaad37b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a07c47253f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-07 14:30:32</sys_updated_on>
+        <type>PAR Dashboard Metadata</type>
+        <update_guid>bbd91db3d8cf0f1069531acd862aa67a</update_guid>
+        <update_guid_history>bbd91db3d8cf0f1069531acd862aa67a:1851134343,7bd9d9b35acf0f10351dcb42eae8004a:2050876892,d5d999b3f1cf0f105b0f57796da0f116:-1464990850,c9d959b32dcf0f105615d25b9bf82e40:384632768,9ae8593359cf0f100c24a02dced11930:-959939172,8d7b38f35dcb0f10dc4789c77a5b05de:829002182</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">f8eadd3783cf0f107731cbd6feaad310</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-07 14:34:58</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_user_metadata">par_dashboard_user_metadata</sys_db_object>
+        <sys_id>19b9339dafd046af99d26447c53654c1</sys_id>
+        <sys_metadata>897b38f383cb0f107731cbd6feaad39a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_scope_delete display_value="">0b5280aa1c68490985956c85d93a9321</sys_scope_delete>
+        <sys_update_name>par_dashboard_user_metadata_897b38f383cb0f107731cbd6feaad39a</sys_update_name>
+        <sys_update_version display_value="par_dashboard_user_metadata_897b38f383cb0f107731cbd6feaad39a">fbd91db383cf0f107731cbd6feaad37b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-07 14:34:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

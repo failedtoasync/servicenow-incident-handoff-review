@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions table="x_1880631_incide_0_incident_handoff_review">review_statusINcomplete,cancelled<item display_value="complete,cancelled" endquery="false" field="review_status" goto="false" newquery="false" operator="IN" or="false" value="complete,cancelled"/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>200</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {}]]></script_false>
+        <script_true><![CDATA[function onCondition() {}]]></script_true>
+        <set_values/>
+        <short_description>Makes review notes field mandatory when an IHR is complete or manually canceled, esuring the reviewer documents the outcome or reason for the closure.</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-04 14:49:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c6518232830747107731cbd6feaad3f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Makes review notes field mandatory when an IHR is complete or manually canceled, esuring the reviewer documents the outcome or reason for the closure.</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Incident Handoff Review and Escalation" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review and Escalation">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name>sys_ui_policy_c6518232830747107731cbd6feaad3f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-04 14:49:04</sys_updated_on>
+        <table>x_1880631_incide_0_incident_handoff_review</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</application>
+        <file_path/>
+        <instance_id>97395eb0dbd635d8f697684e1396196a</instance_id>
+        <instance_name>dev200526</instance_name>
+        <name>sys_ui_policy_c6518232830747107731cbd6feaad3f6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions table="x_1880631_incide_0_incident_handoff_review"&gt;review_statusINcomplete,cancelled&lt;item display_value="complete,cancelled" endquery="false" field="review_status" goto="false" newquery="false" operator="IN" or="false" value="complete,cancelled"/&gt;&lt;/conditions&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;200&lt;/order&gt;&lt;reverse_if_false&gt;true&lt;/reverse_if_false&gt;&lt;run_scripts&gt;false&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {}]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;Makes review notes field mandatory when an IHR is complete or manually canceled, esuring the reviewer documents the outcome or reason for the closure.&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-04 14:49:04&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c6518232830747107731cbd6feaad3f6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Makes review notes field mandatory when an IHR is complete or manually canceled, esuring the reviewer documents the outcome or reason for the closure.&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Incident Handoff Review and Escalation" source="x_1880631_incide_0"&gt;85a235c3836e4f907731cbd6feaad3ba&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Incident Handoff Review and Escalation"&gt;85a235c3836e4f907731cbd6feaad3ba&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_c6518232830747107731cbd6feaad3f6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-04 14:49:04&lt;/sys_updated_on&gt;&lt;table&gt;x_1880631_incide_0_incident_handoff_review&lt;/table&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1064428783</payload_hash>
+        <record_name>Makes review notes field mandatory when an IHR is complete or manually canceled, esuring the reviewe</record_name>
+        <reverted_from/>
+        <source>41a235c3836e4f907731cbd6feaad3c1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-04 14:49:04</sys_created_on>
+        <sys_id>8a51c232830747107731cbd6feaad356</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a06ce508740000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-04 14:49:04</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>4a51c232310747104971803b95909355</update_guid>
+        <update_guid_history>4a51c232310747104971803b95909355:-1064428783</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-08 09:14:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>010ba37cb8cb48cc80f47811069f91e1</sys_id>
+        <sys_metadata>c6518232830747107731cbd6feaad3f6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Makes review notes field mandatory when an IHR is complete or manually canceled, esuring the reviewer documents the outcome or reason for the closure.</sys_name>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_parent display_value="Incident Handoff Review">d3191acf83628f907731cbd6feaad3b2</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_scope_delete display_value="">0b5280aa1c68490985956c85d93a9321</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_c6518232830747107731cbd6feaad3f6</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_c6518232830747107731cbd6feaad3f6">8a51c232830747107731cbd6feaad356</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-08 09:14:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

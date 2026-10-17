@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>10</order>
+        <role display_value="x_1880631_incide_0.admin" name="x_1880631_incide_0.admin">c1a235c3836e4f907731cbd6feaad3d8</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 11:51:55</sys_created_on>
+        <sys_id>1da235c3836e4f907731cbd6feaad3dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>c1a235c3836e4f907731cbd6feaad3d8</sys_name>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name>sys_embedded_help_role_1da235c3836e4f907731cbd6feaad3dd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 11:51:55</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

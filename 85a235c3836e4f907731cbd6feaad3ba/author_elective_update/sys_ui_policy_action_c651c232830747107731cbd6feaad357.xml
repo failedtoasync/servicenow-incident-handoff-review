@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>review_notes</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-04 14:49:04</sys_created_on>
+        <sys_id>c651c232830747107731cbd6feaad357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>review_notes</sys_name>
+        <sys_package display_value="Incident Handoff Review and Escalation" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review and Escalation">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name>sys_ui_policy_action_c651c232830747107731cbd6feaad357</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-04 14:49:04</sys_updated_on>
+        <table>x_1880631_incide_0_incident_handoff_review</table>
+        <ui_policy display_value="Makes review notes field mandatory when an IHR is complete or manually canceled, esuring the reviewer documents the outcome or reason for the closure.">c6518232830747107731cbd6feaad3f6</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=c651c232830747107731cbd6feaad357"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</application>
+        <file_path/>
+        <instance_id>97395eb0dbd635d8f697684e1396196a</instance_id>
+        <instance_name>dev200526</instance_name>
+        <name>sys_ui_policy_action_c651c232830747107731cbd6feaad357</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>review_notes</field><field_message/><field_message_type>none</field_message_type><mandatory>true</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-04 14:49:04</sys_created_on><sys_id>c651c232830747107731cbd6feaad357</sys_id><sys_mod_count>0</sys_mod_count><sys_name>review_notes</sys_name><sys_package display_value="Incident Handoff Review and Escalation" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package><sys_policy/><sys_scope display_value="Incident Handoff Review and Escalation">85a235c3836e4f907731cbd6feaad3ba</sys_scope><sys_update_name>sys_ui_policy_action_c651c232830747107731cbd6feaad357</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 14:49:04</sys_updated_on><table>x_1880631_incide_0_incident_handoff_review</table><ui_policy display_value="Makes review notes field mandatory when an IHR is complete or manually canceled, esuring the reviewer documents the outcome or reason for the closure.">c6518232830747107731cbd6feaad3f6</ui_policy><value/><value_action>ignore</value_action><visible>ignore</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=c651c232830747107731cbd6feaad357"/></record_update>]]></payload>
+        <payload_hash>-1749487785</payload_hash>
+        <record_name>review_notes</record_name>
+        <reverted_from/>
+        <source>41a235c3836e4f907731cbd6feaad3c1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-04 14:49:04</sys_created_on>
+        <sys_id>0651c232830747107731cbd6feaad35d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a06ce508ae0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-04 14:49:04</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>c251c23260074710cb3831ad8cbb715c</update_guid>
+        <update_guid_history>c251c23260074710cb3831ad8cbb715c:-1749487785</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-05 15:14:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>884b8e8fd42a482a98fc3fec95eb5829</sys_id>
+        <sys_metadata>c651c232830747107731cbd6feaad357</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>review_notes</sys_name>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_parent display_value="">c6518232830747107731cbd6feaad3f6</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_scope_delete display_value="">0b5280aa1c68490985956c85d93a9321</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_c651c232830747107731cbd6feaad357</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_c651c232830747107731cbd6feaad357">0651c232830747107731cbd6feaad35d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-05 15:14:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

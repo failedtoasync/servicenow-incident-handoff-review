@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_1880631_incide_0_incident_handoff_review">review_status=escalated<item display_value="Escalated" endquery="false" field="review_status" goto="false" newquery="false" operator="=" or="false" value="escalated"/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {}]]></script_false>
+        <script_true><![CDATA[function onCondition() {}]]></script_true>
+        <set_values/>
+        <short_description>If Review Status field is set to Escalated - Escalated To and Escalation Reason fields should be set to mandatory. </short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 15:42:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4e77a60f83e28f907731cbd6feaad3ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>If Review Status field is set to Escalated - Escalated To and Escalation Reason fields should be set to mandatory. </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name>sys_ui_policy_4e77a60f83e28f907731cbd6feaad3ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 15:42:43</sys_updated_on>
+        <table>x_1880631_incide_0_incident_handoff_review</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

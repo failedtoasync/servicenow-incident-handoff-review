@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>escalated_to</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 15:42:43</sys_created_on>
+        <sys_id>4a77e60f83e28f907731cbd6feaad357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>escalated_to</sys_name>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name>sys_ui_policy_action_4a77e60f83e28f907731cbd6feaad357</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 15:42:43</sys_updated_on>
+        <table>x_1880631_incide_0_incident_handoff_review</table>
+        <ui_policy display_value="If Review Status field is set to Escalated - Escalated To and Escalation Reason fields should be set to mandatory. ">4e77a60f83e28f907731cbd6feaad3ba</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=4a77e60f83e28f907731cbd6feaad357"/>
+</record_update>

@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=3367873000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>049a0e497743011031e3b3c64b5a9996</copied_from>
+        <copied_from_name>FlowTemplate: Record Trigger</copied_from_name>
+        <description>Automates the initial handling of a newly created Incident Handoff Review by assigning a review owner, updating the related Incident, and notifying the reviewer that a review is required.</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>ihr__review_assignment_amp_notification</internal_name>
+        <label_cache>[{"name":"86f0f683-4bd5-4c01-a860-ba4b29093b61.record.number","label":"1 - Update Record➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number","usedInstances":{"02d3220d-509f-4b67-a919-6f999e618d0c":[null]}},{"name":"b2c77189-5153-42cf-aa24-2a5b4f9b6da2.record.review_owner.email","label":"2 - Update Record➛ Record➛Review Owner➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"02d3220d-509f-4b67-a919-6f999e618d0c":["ah_to"]}},{"name":"b2c77189-5153-42cf-aa24-2a5b4f9b6da2.record","label":"2 - Update Record➛ Record","reference":"x_1880631_incide_0_incident_handoff_review","reference_display":"Incident Handoff Review","type":"reference","base_type":"reference","usedInstances":{"02d3220d-509f-4b67-a919-6f999e618d0c":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"86f0f683-4bd5-4c01-a860-ba4b29093b61.record.caller_id.manager","label":"1 - Update Record➛Incident Record➛Caller➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"b2c77189-5153-42cf-aa24-2a5b4f9b6da2":["review_owner"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛ Record","reference":"x_1880631_incide_0_incident_handoff_review","reference_display":"Incident Handoff Review","type":"reference","base_type":"reference","usedInstances":{"b2c77189-5153-42cf-aa24-2a5b4f9b6da2":["record"]},"attributes":{}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛ Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_1880631_incide_0_incident_handoff_review","column_name":"number","usedInstances":{"86f0f683-4bd5-4c01-a860-ba4b29093b61":["work_notes"],"02d3220d-509f-4b67-a919-6f999e618d0c":[null]}},{"name":"Created_1.current.incident","label":"Trigger - Record Created➛ Record➛Incident","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","parent_table_name":"x_1880631_incide_0_incident_handoff_review","column_name":"incident","usedInstances":{"86f0f683-4bd5-4c01-a860-ba4b29093b61":["record"],"02d3220d-509f-4b67-a919-6f999e618d0c":[null]}},{"name":"b2c77189-5153-42cf-aa24-2a5b4f9b6da2.table_name","label":"2 - Update Record➛ Table","reference":"x_1880631_incide_0_incident_handoff_review","reference_display":"Incident Handoff Review","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>de49386e838b83107731cbd6feaad33f</master_snapshot>
+        <master_snapshot_digest/>
+        <name>IHR - Review Assignment &amp; Notification</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>a393e10f83b787947731cbd6feaad34a</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:33:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3f1434a2838b83107731cbd6feaad3f6</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>IHR - Review Assignment &amp; Notification</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name>sys_hub_flow_3f1434a2838b83107731cbd6feaad3f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-12 14:04:46</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>c2a3250f83b787947731cbd6feaad3fa</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=3f1434a2838b83107731cbd6feaad3f6"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3f1434a2838b83107731cbd6feaad3f6"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1880631_incide_0_incident_handoff_review">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-12 14:04:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a393e10f83b787947731cbd6feaad34a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-12 14:04:45</sys_updated_on>
+        <table>x_1880631_incide_0_incident_handoff_review</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>3f1434a2838b83107731cbd6feaad3f6</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-12 14:04:45</sys_created_on>
+        <sys_id>6b93e10f83b787947731cbd6feaad34b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-12 14:04:45</sys_updated_on>
+        <trigger display_value="">a393e10f83b787947731cbd6feaad34a</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=3f1434a2838b83107731cbd6feaad3f6^sys_idNOT IN6b93e10f83b787947731cbd6feaad34b"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=3f1434a2838b83107731cbd6feaad3f6"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3f1434a2838b83107731cbd6feaad3f6^sys_idNOT IN331434a2838b83107731cbd6feaad3fd"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3f1434a2838b83107731cbd6feaad3f6</id>
+        <name>IHR - Review Assignment &amp; Notification</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:33:12</sys_created_on>
+        <sys_id>331434a2838b83107731cbd6feaad3fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:33:12</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=331434a2838b83107731cbd6feaad3fd"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=3f1434a2838b83107731cbd6feaad3f6^sys_idNOT IN002474a2838b83107731cbd6feaad316,c02474a2838b83107731cbd6feaad324"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="IHR - Review Assignment &amp; Notification">3f1434a2838b83107731cbd6feaad3f6</model>
+        <model_id>3f1434a2838b83107731cbd6feaad3f6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_3f1434a2838b83107731cbd6feaad3f6</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:33:12</sys_created_on>
+        <sys_id>002474a2838b83107731cbd6feaad316</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:55:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=002474a2838b83107731cbd6feaad316"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="IHR - Review Assignment &amp; Notification">3f1434a2838b83107731cbd6feaad3f6</model>
+        <model_id>3f1434a2838b83107731cbd6feaad3f6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_3f1434a2838b83107731cbd6feaad3f6</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:33:12</sys_created_on>
+        <sys_id>c02474a2838b83107731cbd6feaad324</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:55:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c02474a2838b83107731cbd6feaad324"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=3f1434a2838b83107731cbd6feaad3f6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3f1434a2838b83107731cbd6feaad3f6"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=3f1434a2838b83107731cbd6feaad3f6^sys_idNOT IN482474a2838b83107731cbd6feaad36a"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="IHR - Review Assignment &amp; Notification">3f1434a2838b83107731cbd6feaad3f6</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:33:13</sys_created_on>
+        <sys_id>482474a2838b83107731cbd6feaad36a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 15:03:58</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VY2W7jNhT9FUFPLZACWmzLyts0SdEA05nW8bQPQUpQFGkLpSlXopR4Bvn3XmqLrMVLnHTs5CWISYo85/Lw3EveftNlFMxmNLoWscSC0JtVfO3r5zoeuZiMxq7jDGzDNA3bpLZnk9HAG2LXxbZ+pnPsUQ5Dp9jjFH4HQtJIYD5dLSk0S9WMBF6ovgUWPpZhtNLPZZTQM51F4WJKF0uOJQxmmMfQGEY+jfRz80zPPivmgM9TzBP1+wGZ47Exsk0UCBL4FBnFP0KiOSwRMoYimgb0Hj7ygximX/1ZfAstSxzBvFKt8U0n84D7ERX6+e0dgFekCSPYtahBbNO2LMOwxgPTG9meafk2pobRQboBVHZwf2JFHyQVPvUrwq2wRBT7nwVfVSPmENUc/AI/xMFXmH1sqHGMAnZSEKt+ooJ03kzmYUDo56UMQpG35DjzzpAnC/Epx6/CRRlOuKyFK4lhPrpUkBWIAhG7mYf3k3LBXwKRsSs6eUgwr35hCeryEkljFXAWcAg9ymMTh0mUoZ9cXXyeXKK/Pkwvfr2aoMnVzXRyfTG9utQfM17o30TNmCMssKCcDgyISRQs5Qcig7SU0ePZS4j6IhR+kMWtJWxSdsV1TDUR1Ha1jNkmtRtGJSNSW7XU/N9Xf7TFnDdu0/NohLFPcY+ePdbDtwOM7KBex79J2UXLLtIeGMZ3EnfhSs/V9iL0Kb+sayFXINjTMpEqWvdYyBjJEGHfR7U4qqGAaZvYc26vqfgoEbAUqnayrfss4FXkPwYxEL2Fc11GNQMD/exjMeUkEVoIWw5/NJJEEFSplYeEXS/wrNgL9nsp5CyYhf5SHCG0QPEqRvPEQ2sRRY47ds1Rn7QdshbB7CjB1Le6fveodplySmRNrexLXP/1WxDHgZjVwltxzDarRbFiB6rXygjmVOPT4np3iH21JZQ2pNGwsU0C2WZupsmYR5llOComIG2PmYZjDDHzbcMg1kZp9wKWDa2/isntZ3Fxdsr4DmeqGe0SvFIw30ew6brai3kspY7CSS+OEFojI9h7pYRKoXnz5e5CfeEyCfupcnB/18zw6kmB8fAenOgZCcHD5J9ZFCbCb1qmmlMLhPY0QvuhiPyPp2WY9eTAwohu5rs+4nRYHpwWnkRUHmAsVu2EkDdus36bmZ5LB9QAx7fB7L2h63oEW4w5I4daZq+AOwGdhOVvOTBp14nr89hOMaZdGt7D+L8/wIPsv1Bjp/nnfW/d5u/nVCAgGSGujLzl9jOuHlyKvsPMoLVU+nQv2//Vho1dMjQdhzjggeAGbEA9bA4sYOmM7PFwG89NwGQH9//l3qssXwHpcYoveddxPfAcp6RjKqXKZPuXLwKuBtk3OIdXy+lqQ7XMqsJI+xSKn66fxmk3FHJn9mxyQhm+XsfsQlopUHtTrL1Qzlt1GzD9GdrXmKqLSc+ev7fbfuOEpeuh7LjtPyegW18C6GA8dJndnQCYu9kV+tkcfWG4owulvX7WVYDtesrTTrOoCrJmSfeMfW+oqZja3lKMvt+gHFQAl0e29/njOWDfRYGR1YuHVBkKLUUhqyefy1CDDg0W0QKmFWipr3krTc4pbAaHOxIsqKnVTyzr1JNum3l11N407/xO2ao1oFkryv4TIvYyZUTjHG18J+qI17YqgfoOHg7tnmui23w06oK0BfHR1wt7m0ra5VEb8+N+8zbn7MyQtT1e18SOBcEbZv1qT14dKI40l9/9B2MCRGrEJAAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=3f1434a2838b83107731cbd6feaad3f6^sys_idNOT IN3e267ca6838b83107731cbd6feaad3ff,7e9438e2838b83107731cbd6feaad355,d627fc2a838b83107731cbd6feaad3a4"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IHR - Review Assignment &amp; Notification">3f1434a2838b83107731cbd6feaad3f6</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:42:08</sys_created_on>
+        <sys_id>3e267ca6838b83107731cbd6feaad3ff</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-12 14:11:33</sys_updated_on>
+        <ui_id>b2c77189-5153-42cf-aa24-2a5b4f9b6da2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXWvbMBT9K0XPiZHi1Dh5Gw2FQddCO/rSDSFL14lAlj1ZTpqZ/Pdd23IautJ10D2U5cm6H9I5J/dIDy3RiizJHBRlC5bImMXxjNJZOmdZEmdspmIBwMiEWFEAVjqQpVO43grTdIG2vXAgPCjOItk4B9YfDphXuq6M2N+HMozIjTYK82T58H1CKuFwRw+OLNtnqbdCMiIDg6W3I6bnGP2+6taqlE2BuLgeg1ehcxUyZ59XmMGmDg6jEwKPHqwCBJILU8OEFMIq4Uu3J0vvGgwgaXVjzf5YsdHWD0QL8Vjrn3jynHZ1OSAzGUQ4LnkQaAjnK+HFHe4sfeOOepVaQj1ooiAXjfEXp7Gh4KbyurRDixeZGbtL0xT2elCEHDc4+T+aGkFA1fHskA+08rtNubsdQV5q20sSKJpSCnNcCe+dzhrfwWkJGOg1LkRVabvmlSu3um9GKEW0NriIclPu8Mxar20kZIc7QlVFdInxVR++F053JL7gNth8mJB6X18YUddPVFBD/qPpkAzEAgXeq9BLwPtJ6Jql05X/hEdtIQA/TMLQZ+evTZhcPA3UyZ5Pg//IWZrSJGZcW4nkOA0fiGSD01LmOXew1bB7Bze8Aevohq/9DLyMPRjit9jVae/Z9ZAIdjh/NzukH8kOgcaH98OfXEBnr96zJ5PUD3594oBhunm5s+C+NZTGqm3TJKd5ksbTeabOp3NJ2VSkCZ1mYp7NFnQRZwmLhgs6QvEMOLyVIxwnsQb30sPxbw75O/e9QaPRfZcajKpfEG20HhTIzgMfRHxmv5A8uw/J44v0bh5kCe1/H8iJ/83D9P0XPgYdno8JAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3e267ca6838b83107731cbd6feaad3ff"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IHR - Review Assignment &amp; Notification">3f1434a2838b83107731cbd6feaad3f6</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:35:18</sys_created_on>
+        <sys_id>7e9438e2838b83107731cbd6feaad355</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-12 14:11:33</sys_updated_on>
+        <ui_id>86f0f683-4bd5-4c01-a860-ba4b29093b61</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9K2GeJSTalta3RZEtdFtoF1+6JUxmbuqwk5l0PrSu+N/3JpmoqPQDyoKsT5n7NeecnGseV0RwMiRnwJP0Kr1gg3Qw6CdJ//IszS8GedrnAwqQkh5RtASsNMC04XieU+nrwGo1MkAd8CyNmTcGlIuFYoLjw3qNhVzYStLlNNRjhM2E5FhIho9PPVJRg6MdGDJc7aU+ik3SHCSW3nfg9sG6ZVWfuWa+RFyZ6II3oXMcMtH1GDPYVMNJkx6BVweKAwIpqLTQIyVVnDptlmTojMcAsud3Si43FTOhXEu0pK9W/MGbz5K6rgBkxoIIm2MWBGrDxZg6+oCTmfNmo5cWDGyrCYeCeulGu7G24K5yQqu2xdFcdt1a+lLdtoqQzYCd9+EtgoCq5lkjb2kVDzO9uO9AToRqJAkUpWZUbk7UOSNy72o4KwISGo1LWlVCPWeV0XPRNCOUMn6WeIgLqRd4pxXPKqasxh2jqjSeYHzchKfUiJrEDxyDzesesUs7ktTaLRXUMHvxNZKWWKCQNSo0EmSNE+pmZkTlvuFVcwjA173g/vz8LYexq62hdmZuN6Bz+6HXr7eZz3n+A4g6z/9s3vRxhMH2B7Gb3d7otk0E059/mekvT8n0gcbJu/49ryf9N/9Nd5zU2Nvu+Hyhze9MaST8yyfJgHfujr6jO3RRRPcwF7CIjn0RlC9zMOt1NKM2ygFUxNqaCHsjAy9eGLD4UE+IDzfpn979uV39gKLdrk4ESG6PSNwtKpRI2kHWSr63rCEZTUNy85X6so1NL5Lmd0J7+998rJ7+Ao+SBOWsCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7e9438e2838b83107731cbd6feaad355"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IHR - Review Assignment &amp; Notification">3f1434a2838b83107731cbd6feaad3f6</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:46:28</sys_created_on>
+        <sys_id>d627fc2a838b83107731cbd6feaad3a4</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-12 14:11:33</sys_updated_on>
+        <ui_id>02d3220d-509f-4b67-a919-6f999e618d0c</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d627fc2a838b83107731cbd6feaad3a4"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=3f1434a2838b83107731cbd6feaad3f6"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=3f1434a2838b83107731cbd6feaad3f6"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3f1434a2838b83107731cbd6feaad3f6^sys_idNOT IN51e7e93b83eb0f147731cbd6feaad3e7,5878bc2a838b83107731cbd6feaad32a,9878bc2a838b83107731cbd6feaad32b"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>3f1434a2838b83107731cbd6feaad3f6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{86f0f683-4bd5-4c01-a860-ba4b29093b61.record.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 12:03:12</sys_created_on>
+        <sys_id>51e7e93b83eb0f147731cbd6feaad3e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 12:03:12</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>cc6aa76b-4711-4cd3-86be-8b8b3131658d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>3f1434a2838b83107731cbd6feaad3f6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:52:03</sys_created_on>
+        <sys_id>5878bc2a838b83107731cbd6feaad32a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:52:03</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>bbb99e8c-1415-473c-b1ae-a900815a18e1</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>3f1434a2838b83107731cbd6feaad3f6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.incident}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:52:03</sys_created_on>
+        <sys_id>9878bc2a838b83107731cbd6feaad32b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:52:03</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>935ce40c-7c5c-4909-99aa-f20f562985c8</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3f1434a2838b83107731cbd6feaad3f6"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3f1434a2838b83107731cbd6feaad3f6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:33:12</sys_created_on>
+        <sys_id>442474a2838b83107731cbd6feaad327</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:33:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3f1434a2838b83107731cbd6feaad3f6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:33:12</sys_created_on>
+        <sys_id>842474a2838b83107731cbd6feaad322</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:33:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3f1434a2838b83107731cbd6feaad3f6"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3f1434a2838b83107731cbd6feaad3f6"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>049a0e497743011031e3b3c64b5a9996</copied_from>
+        <copied_from_name/>
+        <description>Automates the initial handling of a newly created Incident Handoff Review by assigning a review owner, updating the related Incident, and notifying the reviewer that a review is required.</description>
+        <flow_priority/>
+        <internal_name>ihr__review_assignment_amp_notification</internal_name>
+        <label_cache>[{"name":"86f0f683-4bd5-4c01-a860-ba4b29093b61.record.number","label":"1 - Update Record➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number","usedInstances":{"02d3220d-509f-4b67-a919-6f999e618d0c":[null]}},{"name":"b2c77189-5153-42cf-aa24-2a5b4f9b6da2.record.review_owner.email","label":"2 - Update Record➛ Record➛Review Owner➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"02d3220d-509f-4b67-a919-6f999e618d0c":["ah_to"]}},{"name":"b2c77189-5153-42cf-aa24-2a5b4f9b6da2.record","label":"2 - Update Record➛ Record","reference":"x_1880631_incide_0_incident_handoff_review","reference_display":"Incident Handoff Review","type":"reference","base_type":"reference","usedInstances":{"02d3220d-509f-4b67-a919-6f999e618d0c":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"86f0f683-4bd5-4c01-a860-ba4b29093b61.record.caller_id.manager","label":"1 - Update Record➛Incident Record➛Caller➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"b2c77189-5153-42cf-aa24-2a5b4f9b6da2":["review_owner"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛ Record","reference":"x_1880631_incide_0_incident_handoff_review","reference_display":"Incident Handoff Review","type":"reference","base_type":"reference","usedInstances":{"b2c77189-5153-42cf-aa24-2a5b4f9b6da2":["record"]},"attributes":{}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛ Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_1880631_incide_0_incident_handoff_review","column_name":"number","usedInstances":{"86f0f683-4bd5-4c01-a860-ba4b29093b61":["work_notes"],"02d3220d-509f-4b67-a919-6f999e618d0c":[null]}},{"name":"Created_1.current.incident","label":"Trigger - Record Created➛ Record➛Incident","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","parent_table_name":"x_1880631_incide_0_incident_handoff_review","column_name":"incident","usedInstances":{"86f0f683-4bd5-4c01-a860-ba4b29093b61":["record"],"02d3220d-509f-4b67-a919-6f999e618d0c":[null]}},{"name":"b2c77189-5153-42cf-aa24-2a5b4f9b6da2.table_name","label":"2 - Update Record➛ Table","reference":"x_1880631_incide_0_incident_handoff_review","reference_display":"Incident Handoff Review","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>IHR - Review Assignment &amp; Notification</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="IHR - Review Assignment &amp; Notification">3f1434a2838b83107731cbd6feaad3f6</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de49386e838b83107731cbd6feaad33f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-12 14:04:42</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=de49386e838b83107731cbd6feaad33f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=de49386e838b83107731cbd6feaad33f"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=de49386e838b83107731cbd6feaad33f"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=de49386e838b83107731cbd6feaad33f^sys_idNOT IN9e49386e838b83107731cbd6feaad341"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>de49386e838b83107731cbd6feaad33f</id>
+        <name>IHR - Review Assignment &amp; Notification</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:45</sys_created_on>
+        <sys_id>9e49386e838b83107731cbd6feaad341</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:55:45</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=9e49386e838b83107731cbd6feaad341"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=de49386e838b83107731cbd6feaad33f^sys_idNOT IN1a49386e838b83107731cbd6feaad343,9649386e838b83107731cbd6feaad361"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="IHR - Review Assignment &amp; Notification">de49386e838b83107731cbd6feaad33f</model>
+        <model_id>de49386e838b83107731cbd6feaad33f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_de49386e838b83107731cbd6feaad33f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:45</sys_created_on>
+        <sys_id>1a49386e838b83107731cbd6feaad343</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-12 14:04:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1a49386e838b83107731cbd6feaad343"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="IHR - Review Assignment &amp; Notification">de49386e838b83107731cbd6feaad33f</model>
+        <model_id>de49386e838b83107731cbd6feaad33f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_de49386e838b83107731cbd6feaad33f</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:45</sys_created_on>
+        <sys_id>9649386e838b83107731cbd6feaad361</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-12 14:04:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9649386e838b83107731cbd6feaad361"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=de49386e838b83107731cbd6feaad33f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=de49386e838b83107731cbd6feaad33f"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=de49386e838b83107731cbd6feaad33f^sys_idNOT INa249386e838b83107731cbd6feaad37a"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="IHR - Review Assignment &amp; Notification">de49386e838b83107731cbd6feaad33f</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:46</sys_created_on>
+        <sys_id>a249386e838b83107731cbd6feaad37a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 15:03:59</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VY2W7jNhT9FUFPLZACWmzLyts0SdEA05nW8bQPQUpQFGkLpSlXopR4Bvn3XmqLrMVLnHTs5CWISYo85/Lw3EveftNlFMxmNLoWscSC0JtVfO3r5zoeuZiMxq7jDGzDNA3bpLZnk9HAG2LXxbZ+pnPsUQ5Dp9jjFH4HQtJIYD5dLSk0S9WMBF6ovgUWPpZhtNLPZZTQM51F4WJKF0uOJQxmmMfQGEY+jfRz80zPPivmgM9TzBP1+wGZ47Exsk0UCBL4FBnFP0KiOSwRMoYimgb0Hj7ygximX/1ZfAstSxzBvFKt8U0n84D7ERX6+e0dgFekCSPYtahBbNO2LMOwxgPTG9meafk2pobRQboBVHZwf2JFHyQVPvUrwq2wRBT7nwVfVSPmENUc/AI/xMFXmH1sqHGMAnZSEKt+ooJ03kzmYUDo56UMQpG35DjzzpAnC/Epx6/CRRlOuKyFK4lhPrpUkBWIAhG7mYf3k3LBXwKRsSs6eUgwr35hCeryEkljFXAWcAg9ymMTh0mUoZ9cXXyeXKK/Pkwvfr2aoMnVzXRyfTG9utQfM17o30TNmCMssKCcDgyISRQs5Qcig7SU0ePZS4j6IhR+kMWtJWxSdsV1TDUR1Ha1jNkmtRtGJSNSW7XU/N9Xf7TFnDdu0/NohLFPcY+ePdbDtwOM7KBex79J2UXLLtIeGMZ3EnfhSs/V9iL0Kb+sayFXINjTMpEqWvdYyBjJEGHfR7U4qqGAaZvYc26vqfgoEbAUqnayrfss4FXkPwYxEL2Fc11GNQMD/exjMeUkEVoIWw5/NJJEEFSplYeEXS/wrNgL9nsp5CyYhf5SHCG0QPEqRvPEQ2sRRY47ds1Rn7QdshbB7CjB1Le6fveodplySmRNrexLXP/1WxDHgZjVwltxzDarRbFiB6rXygjmVOPT4np3iH21JZQ2pNGwsU0C2WZupsmYR5llOComIG2PmYZjDDHzbcMg1kZp9wKWDa2/isntZ3Fxdsr4DmeqGe0SvFIw30ew6brai3kspY7CSS+OEFojI9h7pYRKoXnz5e5CfeEyCfupcnB/18zw6kmB8fAenOgZCcHD5J9ZFCbCb1qmmlMLhPY0QvuhiPyPp2WY9eTAwohu5rs+4nRYHpwWnkRUHmAsVu2EkDdus36bmZ5LB9QAx7fB7L2h63oEW4w5I4daZq+AOwGdhOVvOTBp14nr89hOMaZdGt7D+L8/wIPsv1Bjp/nnfW/d5u/nVCAgGSGujLzl9jOuHlyKvsPMoLVU+nQv2//Vho1dMjQdhzjggeAGbEA9bA4sYOmM7PFwG89NwGQH9//l3qssXwHpcYoveddxPfAcp6RjKqXKZPuXLwKuBtk3OIdXy+lqQ7XMqsJI+xSKn66fxmk3FHJn9mxyQhm+XsfsQlopUHtTrL1Qzlt1GzD9GdrXmKqLSc+ev7fbfuOEpeuh7LjtPyegW18C6GA8dJndnQCYu9kV+tkcfWG4owulvX7WVYDtesrTTrOoCrJmSfeMfW+oqZja3lKMvt+gHFQAl0e29/njOWDfRYGR1YuHVBkKLUUhqyefy1CDDg0W0QKmFWipr3krTc4pbAaHOxIsqKnVTyzr1JNum3l11N407/xO2ao1oFkryv4TIvYyZUTjHG18J+qI17YqgfoOHg7tnmui23w06oK0BfHR1wt7m0ra5VEb8+N+8zbn7MyQtT1e18SOBcEbZv1qT14dKI40l9/9B2MCRGrEJAAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=de49386e838b83107731cbd6feaad33f^sys_idNOT IN2a49386e838b83107731cbd6feaad373,2a49386e838b83107731cbd6feaad377,6a49386e838b83107731cbd6feaad374"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IHR - Review Assignment &amp; Notification">de49386e838b83107731cbd6feaad33f</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:46</sys_created_on>
+        <sys_id>2a49386e838b83107731cbd6feaad373</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:55:46</sys_updated_on>
+        <ui_id>86f0f683-4bd5-4c01-a860-ba4b29093b61</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9K2GeJSTalta3RZEtdFtoF1+6JUxmbuqwk5l0PrSu+N/3JpmoqPQDyoKsT5n7NeecnGseV0RwMiRnwJP0Kr1gg3Qw6CdJ//IszS8GedrnAwqQkh5RtASsNMC04XieU+nrwGo1MkAd8CyNmTcGlIuFYoLjw3qNhVzYStLlNNRjhM2E5FhIho9PPVJRg6MdGDJc7aU+ik3SHCSW3nfg9sG6ZVWfuWa+RFyZ6II3oXMcMtH1GDPYVMNJkx6BVweKAwIpqLTQIyVVnDptlmTojMcAsud3Si43FTOhXEu0pK9W/MGbz5K6rgBkxoIIm2MWBGrDxZg6+oCTmfNmo5cWDGyrCYeCeulGu7G24K5yQqu2xdFcdt1a+lLdtoqQzYCd9+EtgoCq5lkjb2kVDzO9uO9AToRqJAkUpWZUbk7UOSNy72o4KwISGo1LWlVCPWeV0XPRNCOUMn6WeIgLqRd4pxXPKqasxh2jqjSeYHzchKfUiJrEDxyDzesesUs7ktTaLRXUMHvxNZKWWKCQNSo0EmSNE+pmZkTlvuFVcwjA173g/vz8LYexq62hdmZuN6Bz+6HXr7eZz3n+A4g6z/9s3vRxhMH2B7Gb3d7otk0E059/mekvT8n0gcbJu/49ryf9N/9Nd5zU2Nvu+Hyhze9MaST8yyfJgHfujr6jO3RRRPcwF7CIjn0RlC9zMOt1NKM2ygFUxNqaCHsjAy9eGLD4UE+IDzfpn979uV39gKLdrk4ESG6PSNwtKpRI2kHWSr63rCEZTUNy85X6so1NL5Lmd0J7+998rJ7+Ao+SBOWsCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2a49386e838b83107731cbd6feaad373"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IHR - Review Assignment &amp; Notification">de49386e838b83107731cbd6feaad33f</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:46</sys_created_on>
+        <sys_id>2a49386e838b83107731cbd6feaad377</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 12:03:23</sys_updated_on>
+        <ui_id>02d3220d-509f-4b67-a919-6f999e618d0c</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2a49386e838b83107731cbd6feaad377"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IHR - Review Assignment &amp; Notification">de49386e838b83107731cbd6feaad33f</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:46</sys_created_on>
+        <sys_id>6a49386e838b83107731cbd6feaad374</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:55:46</sys_updated_on>
+        <ui_id>b2c77189-5153-42cf-aa24-2a5b4f9b6da2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXWvbMBT9K0XPiZHi1Dh5Gw2FQddCO/rSDSFL14lAlj1ZTpqZ/Pdd23IautJ10D2U5cm6H9I5J/dIDy3RiizJHBRlC5bImMXxjNJZOmdZEmdspmIBwMiEWFEAVjqQpVO43grTdIG2vXAgPCjOItk4B9YfDphXuq6M2N+HMozIjTYK82T58H1CKuFwRw+OLNtnqbdCMiIDg6W3I6bnGP2+6taqlE2BuLgeg1ehcxUyZ59XmMGmDg6jEwKPHqwCBJILU8OEFMIq4Uu3J0vvGgwgaXVjzf5YsdHWD0QL8Vjrn3jynHZ1OSAzGUQ4LnkQaAjnK+HFHe4sfeOOepVaQj1ooiAXjfEXp7Gh4KbyurRDixeZGbtL0xT2elCEHDc4+T+aGkFA1fHskA+08rtNubsdQV5q20sSKJpSCnNcCe+dzhrfwWkJGOg1LkRVabvmlSu3um9GKEW0NriIclPu8Mxar20kZIc7QlVFdInxVR++F053JL7gNth8mJB6X18YUddPVFBD/qPpkAzEAgXeq9BLwPtJ6Jql05X/hEdtIQA/TMLQZ+evTZhcPA3UyZ5Pg//IWZrSJGZcW4nkOA0fiGSD01LmOXew1bB7Bze8Aevohq/9DLyMPRjit9jVae/Z9ZAIdjh/NzukH8kOgcaH98OfXEBnr96zJ5PUD3594oBhunm5s+C+NZTGqm3TJKd5ksbTeabOp3NJ2VSkCZ1mYp7NFnQRZwmLhgs6QvEMOLyVIxwnsQb30sPxbw75O/e9QaPRfZcajKpfEG20HhTIzgMfRHxmv5A8uw/J44v0bh5kCe1/H8iJ/83D9P0XPgYdno8JAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6a49386e838b83107731cbd6feaad374"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=de49386e838b83107731cbd6feaad33f"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=de49386e838b83107731cbd6feaad33f"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=de49386e838b83107731cbd6feaad33f^sys_idNOT IN2a49386e838b83107731cbd6feaad37a,6649386e838b83107731cbd6feaad37a,90f7ed3b83eb0f147731cbd6feaad30e"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>de49386e838b83107731cbd6feaad33f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.incident}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:46</sys_created_on>
+        <sys_id>2a49386e838b83107731cbd6feaad37a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:55:46</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>935ce40c-7c5c-4909-99aa-f20f562985c8</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>de49386e838b83107731cbd6feaad33f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:46</sys_created_on>
+        <sys_id>6649386e838b83107731cbd6feaad37a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:55:46</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>bbb99e8c-1415-473c-b1ae-a900815a18e1</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>de49386e838b83107731cbd6feaad33f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{86f0f683-4bd5-4c01-a860-ba4b29093b61.record.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 12:03:23</sys_created_on>
+        <sys_id>90f7ed3b83eb0f147731cbd6feaad30e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 12:03:23</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>cc6aa76b-4711-4cd3-86be-8b8b3131658d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=de49386e838b83107731cbd6feaad33f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_de49386e838b83107731cbd6feaad33f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:45</sys_created_on>
+        <sys_id>d249386e838b83107731cbd6feaad351</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:55:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_de49386e838b83107731cbd6feaad33f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:45</sys_created_on>
+        <sys_id>d249386e838b83107731cbd6feaad368</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-03 14:55:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_de49386e838b83107731cbd6feaad33f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_de49386e838b83107731cbd6feaad33f"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>3f1434a2838b83107731cbd6feaad3f6</sys_id>
+        <latest_snapshot>de49386e838b83107731cbd6feaad33f</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch10-05-22-2026_06-12-2026_2311.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=3f1434a2838b83107731cbd6feaad3f6^sys_idNOT INe649386e838b83107731cbd6feaad395"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"e649386e838b83107731cbd6feaad395","name":"plan","plan_signature":null}}</plan>
+        <plan_id>3f1434a2838b83107731cbd6feaad3f6</plan_id>
+        <snapshot>0325a9cf83b787947731cbd6feaad373</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 14:55:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e649386e838b83107731cbd6feaad395</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-12 14:04:46</sys_updated_on>
+        <trigger display_value="">a393e10f83b787947731cbd6feaad34a</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=3f1434a2838b83107731cbd6feaad3f6"/>
+</record_update>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>incident</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="incident">assignment_groupVALCHANGES^ORreopen_countVALCHANGES^EQ<item endquery="false" field="assignment_group" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="reopen_count" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Create Incident Handoff Review</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+
+    var IHR_Table = 'x_1880631_incide_0_incident_handoff_review';
+    var Handoff_Threshold = 3;
+
+    var reassignmentCount = parseInt(current.getValue('reassignment_count'), 10) || 0;
+    var incReopenCount = parseInt(current.getValue('reopen_count'), 10) || 0;
+
+
+    //CONDITIONS
+
+    //1. Incident must be active : New (1) / On Hold (2) / In Progress (3)
+
+    var state = current.getValue('state');
+    if (state !== '1' && state !== '2' && state !== '3') {
+        return;
+    }
+
+    //2. Do not create/update an IHR if the incident has a Problem.
+
+    if (current.getValue('problem_id')) {
+        return;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------------*/
+
+    //Finding the most recent IHR record for this incident.
+
+    var ihr = new GlideRecord(IHR_Table);
+    ihr.addQuery('incident', current.getUniqueValue().toString());
+    ihr.orderByDesc('sys_created_on');
+    ihr.setLimit(1);
+    ihr.query();
+
+
+    /*Case A : No IHR exists for this incident.
+	First IHR (Create an IHR when the Incident's reassignent count reaches or exceeds the handoff threshold(3))*/
+
+    if (!ihr.next()) {
+
+        if (reassignmentCount < Handoff_Threshold) {
+            return;
+        }
+
+        var firstIHR = new GlideRecord(IHR_Table);
+        firstIHR.initialize();
+
+        firstIHR.setValue('incident', current.getUniqueValue().toString());
+        firstIHR.setValue('handoff_count', reassignmentCount);
+        firstIHR.setValue('reopen_count', incReopenCount);
+        firstIHR.setValue('review_required', true);
+        firstIHR.setValue('review_status', 'pending');
+
+        var firstIHRId = firstIHR.insert();
+		//testing - var firstIHRId = false;
+
+        if (!firstIHRId) {
+            gs.error('Incident Handoff Review: Failed to create IHR for Incident ' +
+                current.getDisplayValue('number'));
+            return;
+        }
+
+        return;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------------*/
+
+    /*Case B : An IHR already exists and is active.
+	Existing IHR (update handoff count with the latest Incident's reassignment count & reopen count)*/
+
+    var ihrStatus = ihr.getValue('review_status');
+
+    if (ihrStatus === 'pending' || ihrStatus === 'under_review') {
+
+        var existingHandoffCount = parseInt(ihr.getValue('handoff_count'), 10) || 0;
+        var existingReopenCount = parseInt(ihr.getValue('reopen_count'), 10) || 0;
+
+        var updateRequired = false;
+
+        // Reassignment count increased
+        if (reassignmentCount > existingHandoffCount) {
+            ihr.setValue('handoff_count', reassignmentCount);
+            updateRequired = true;
+        }
+
+        // Reopen count increased
+        if (incReopenCount > existingReopenCount) {
+            ihr.setValue('reopen_count', incReopenCount);
+            updateRequired = true;
+        }
+
+        // Update only when at least one count changed
+        if (updateRequired) {
+            
+			var updatedIHRId = ihr.update();
+			//var updatedIHRId = false;
+            
+			if (!updatedIHRId) {
+                gs.error(
+                    'Incident Handoff Review: Failed to update IHR for Incident ' +
+                    current.getDisplayValue('number')
+                );
+            }
+        }
+
+        return;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------------*/
+
+
+    /* CASE C: Existing IHR is inactive.
+     Create a new IHR when the Incident has at least 3 new reassignments since the previous IHR.*/
+
+    var previousReassignmentCount =
+        parseInt(ihr.getValue('handoff_count'), 10) || 0;
+    var newReassignments =
+        reassignmentCount - previousReassignmentCount;
+    if (newReassignments < Handoff_Threshold) {
+        return;
+    }
+
+    // Create a new IHR.
+
+    var newIHR = new GlideRecord(IHR_Table);
+    newIHR.initialize();
+
+    newIHR.setValue('incident', current.getUniqueValue());
+    newIHR.setValue('handoff_count', reassignmentCount);
+    newIHR.setValue('reopen_count', incReopenCount);
+    newIHR.setValue('review_required', true);
+    newIHR.setValue('review_status', 'pending');
+    
+	var newIHRId = newIHR.insert();
+	//var newIHRId = false;
+
+    if (!newIHRId) {
+        gs.error(
+            'Incident Handoff Review: Failed to create new IHR for Incident ' +
+            current.getDisplayValue('number')
+        );
+    }
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-23 15:03:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fecf4ccb833203107731cbd6feaad3da</sys_id>
+        <sys_mod_count>69</sys_mod_count>
+        <sys_name>Create Incident Handoff Review</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name>sys_script_fecf4ccb833203107731cbd6feaad3da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-14 07:11:07</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=fecf4ccb833203107731cbd6feaad3da"/>
+</record_update>

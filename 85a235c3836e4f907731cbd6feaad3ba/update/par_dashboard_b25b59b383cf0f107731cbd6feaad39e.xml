@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard">
+    <par_dashboard action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_dashboard/>
+        <certified>false</certified>
+        <description>Provides an overview of Incident Handoff Reviews, outcomes, handoff trends, and overdue reviews.</description>
+        <experience/>
+        <grid>48</grid>
+        <name>Incident Handoff Review Dashboard</name>
+        <sys_class_name>par_dashboard</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-07 14:37:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b25b59b383cf0f107731cbd6feaad39e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Incident Handoff Review Dashboard</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name>par_dashboard_b25b59b383cf0f107731cbd6feaad39e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-13 13:49:04</sys_updated_on>
+        <sys_ux_app_config/>
+        <sys_ux_app_route/>
+        <sys_ux_macroponent/>
+        <sys_ux_screen/>
+        <sys_ux_screen_type/>
+    </par_dashboard>
+</record_update>

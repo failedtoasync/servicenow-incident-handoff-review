@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>complete_review</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.review_status == 'under_review'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Complete Review</name>
+        <onclick>runClientCode()</onclick>
+        <order>200</order>
+        <script><![CDATA[// 1. CLIENT-SIDE CODE: Runs in the browser first
+function runClientCode() {
+    // Clear any previous error messages
+    g_form.hideFieldMsg('review_notes', true);
+
+    // Fetch the live value from the screen
+    var reviewNotes = g_form.getValue('review_notes');
+
+    // Check if the field is empty
+    if (!reviewNotes || reviewNotes.trim() === '') {
+        // Force the red mandatory asterisk to appear
+        g_form.setMandatory('review_notes', true);
+        
+        // Show an error message directly under the field and a top banner
+        g_form.showFieldMsg('review_notes', 'Review Notes are required before completing the review.', 'error');
+        g_form.addErrorMessage('Cannot complete review: Review Notes are missing.');
+        
+        return false; // Stops the form submission immediately
+    }
+
+    // If valid, safely trigger the server-side function using your Action Name
+    gsftSubmit(null, g_form.getFormElement(), 'complete_review'); 
+}
+
+// 2. SERVER-SIDE CODE: Runs only if the client-side check passes
+if (typeof window == 'undefined') {
+    runServerCode();
+}
+
+function runServerCode() {
+    current.setValue('review_status', 'complete');
+    current.update();
+    
+    // Refresh the page cleanly to show the updated status
+    action.setRedirectURL(current);
+}
+
+]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-03 16:25:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>faad09e6834f83107731cbd6feaad3c2</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name>Complete Review</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Incident Handoff Review" source="x_1880631_incide_0">85a235c3836e4f907731cbd6feaad3ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Handoff Review">85a235c3836e4f907731cbd6feaad3ba</sys_scope>
+        <sys_update_name>sys_ui_action_faad09e6834f83107731cbd6feaad3c2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-08 09:21:45</sys_updated_on>
+        <table>x_1880631_incide_0_incident_handoff_review</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>
