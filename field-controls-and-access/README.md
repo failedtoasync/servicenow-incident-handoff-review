@@ -52,4 +52,4 @@ Four table-level ACLs are configured for `x_1880631_incide_0_incident_handoff_re
 - **Read:** Allowed for users with either the Admin or User role.
 - **Write:** Allowed for users with either the Admin or User role.
 - **Delete:** Restricted to users with the Admin role.
-**Admin Overrides** is enabled on all four ACLs.
+
