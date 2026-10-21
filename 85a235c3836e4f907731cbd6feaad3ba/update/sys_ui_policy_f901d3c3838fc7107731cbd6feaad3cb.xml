@@ -2,7 +2,7 @@
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
         <conditions table="x_1880631_incide_0_incident_handoff_review">review_status=under_review^ORreview_status=cancelled^ORreview_status=complete^EQ<item display_value="Under Review" endquery="false" field="review_status" goto="false" newquery="false" operator="=" or="false" value="under_review"/>
-            <item display_value="Cancelled" endquery="false" field="review_status" goto="false" newquery="false" operator="=" or="true" value="cancelled"/>
+            <item display_value="cancelled" endquery="false" field="review_status" goto="false" newquery="false" operator="=" or="true" value="cancelled"/>
             <item display_value="Complete" endquery="false" field="review_status" goto="false" newquery="false" operator="=" or="true" value="complete"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>

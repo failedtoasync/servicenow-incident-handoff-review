@@ -9,8 +9,8 @@
                 <element inactive_on_update="false" label="Escalated" sequence="3" value="escalated"/>
                 <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
                 <element inactive_on_update="false" label="Under Review" sequence="1" value="under_review"/>
+                <element inactive_on_update="false" label="Canceled" sequence="4" value="canceled"/>
                 <element inactive_on_update="false" label="Complete" sequence="2" value="complete"/>
-                <element inactive_on_update="false" label="Cancelled" sequence="4" value="cancelled"/>
             </choice>
         </element>
         <element label="Escalation Reason" max_length="100" name="escalation_reason" type="string"/>
@@ -19,8 +19,9 @@
         <element choice="1" label="Escalated To" max_length="40" name="escalated_to" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Problem" sequence="0" value="problem"/>
-                <element inactive_on_update="false" label="Other" sequence="2" value="other"/>
-                <element inactive_on_update="false" label="Major Incident" sequence="1" value="major_incident"/>
+                <element inactive_on_update="false" label="Other" sequence="3" value="other"/>
+                <element inactive_on_update="false" label="Change" sequence="1" value="change"/>
+                <element inactive_on_update="false" label="Major Incident" sequence="2" value="major_incident"/>
             </choice>
         </element>
         <element label="Incident" mandatory="true" max_length="32" name="incident" reference="incident" type="reference"/>
