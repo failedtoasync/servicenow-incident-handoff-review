@@ -28,7 +28,6 @@ This section documents the controls used to manage field behavior and record acc
 
 The Data Policy protects recorded review details from being modified after a review reaches a terminal status, helping preserve the outcome and information captured during the review.
 
-`IHR - Ready-only fields on inactive state`
 **Condition:** Review Status is Complete, Escalated, or Cancelled.
 
 **Fields set to read-only:** `review_owner`, `escalated_to`, `escalation_reason`, `review_notes`, `incident`, and `review_status`.
