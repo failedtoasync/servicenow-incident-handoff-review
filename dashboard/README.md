@@ -12,4 +12,4 @@ The dashboard includes five visualizations:
 
 ## Dashboard Screenshot
 
-[View Dashboard Screenshot](screenshots/incident-handoff-review-dashboard.png)
+[View Dashboard Screenshot](../screenshots/incident-handoff-review-dashboard.png)
