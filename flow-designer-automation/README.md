@@ -21,8 +21,6 @@ The flow is triggered when a new record is created in the \*\*Incident Handoff R
 2. **Update Related Incident** — updates the associated Incident as part of the initial review handling.
 3. **Notify Reviewer** — notifies the assigned reviewer that a review is required.
 
-[View Flow Image](screenshots/review-assignment-notification.png)
-
 
 ## 2. IHR - Cancel on Incident Terminal State
 
@@ -44,7 +42,6 @@ It checks whether the Incident state is Resolved (`6`), Closed (`7`), or Cancele
 4. **Update IHR** — sets Review Status to `Cancelled` and Review Notes to `Review cancelled automatically as the related Incident reached terminal state.`
 5. **Send Email** — sends an email notification to the reviewer with the subject `Incident Handoff Review Cancelled.`
 
-[View Flow Image](screenshots/cancel-on-terminal-state.png)
 
 
 ## 3. IHR - Pending Review Reminder
@@ -66,4 +63,9 @@ The flow operates in the context of the Incident Handoff Review table and identi
 
 **IHR Remains Pending Beyond One Day → Send Reminder to Reviewer**
 
-[View Flow Image](screenshots/pending-review-reminder.png)
+### Flow Execution Evidence
+
+- [View Image — Review Assignment & Notification](../screenshots/flow-review-assignment-and-notification.png)
+- [View Image — Incident Terminal-State Cancellation](../screenshots/flow-incident-terminal-state-cancellation.png)
+- [View Image — Pending Review Reminder](../screenshots/flow-pending-review-reminder.png)
+
