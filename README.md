@@ -9,7 +9,7 @@ A ServiceNow scoped application that identifies repeated incident assignment-gro
    - [Detection & Review-Cycle Management](#21-detection--review-cycle-management)
    - [Review Lifecycle & User Actions](#22-review-lifecycle--user-actions)
    - [Automation & Notifications](#23-automation--notifications)
-   - [Governance & Dashboard Visibility](#24-governance--dashboard-visibility)
+   - [Access Control & Dashboard Visibility](#24-access-control--dashboard-visibility)
 3. [Technical Stack & Capabilities](#3-technical-stack--capabilities)
 4. [Validation & Test Scenarios](#4-validation--test-scenarios)
 5. [Repository File Index](#5-repository-file-index)
@@ -38,9 +38,9 @@ Each IHR follows a lifecycle with the statuses `Pending`, `Under Review`, `Compl
 
 Flow Designer automates review assignment and notifications, cancels eligible reviews when their related Incidents reach `Resolved`, `Closed`, or `Canceled`, and sends reminders when a review remains `Pending` for more than one day. Automatic cancellation records an explanatory note and sends a notification.
 
-### 2.4 Governance & Dashboard Visibility
+### 2.4 Access Control & Dashboard Visibility
 
-UI Policies control conditional field visibility and mandatory requirements, while the Data Policy makes designated fields read-only when Review Status is `Complete`, `Escalated`, or `Cancelled`. This prevents changes to the specified review details after the review has been finalized. Application roles and access controls govern access to IHR records.
+UI Policies control conditional field visibility and mandatory requirements, while the Data Policy makes designated fields read-only when Review Status is `Complete`, `Escalated`, or `Cancelled`. This prevents changes to the specified review details after the review has been finalized. Application roles and access control rules (ACLs) govern access to IHR records, restricting create and delete permissions to administrators while allowing authorized users to read and update records.
 
 The **Incident Handoff Review Dashboard** presents review status distribution, reviews requiring attention, review outcomes, handoff counts, and review aging to support operational monitoring.
 
