@@ -2,6 +2,18 @@
 
 A ServiceNow scoped application that identifies repeated incident assignment-group handoffs and manages structured review cycles to improve ownership visibility, track follow-up actions, and support operational oversight through automated review management, notifications, and dashboard reporting.
 
+## Technical Stack & Capabilities
+
+The application was developed in ServiceNow Studio as a scoped application, using platform configuration and server-side scripting to implement the Incident Handoff Review process.
+
+- **Business Rules:** Evaluate Incident updates and manage IHR creation and counter updates.
+- **UI Actions:** Provide form actions for starting and completing reviews.
+- **UI Policies and Data Policies:** Enforce conditional field visibility, mandatory requirements, and read-only behavior.
+- **Flow Designer:** Automates review assignment, notifications, cancellation, and pending-review reminders.
+- **Application Roles and ACLs:** Control access to IHR records.
+- **Reports and Dashboard:** Present review statuses, outcomes, handoff counts, and aging information for operational visibility.
+
+
 ## Table of Contents
 
 1. [The Problem & The Solution](#1-the-problem--the-solution)
@@ -10,9 +22,8 @@ A ServiceNow scoped application that identifies repeated incident assignment-gro
    - [Review Lifecycle & User Actions](#22-review-lifecycle--user-actions)
    - [Automation & Notifications](#23-automation--notifications)
    - [Access Control & Dashboard Visibility](#24-access-control--dashboard-visibility)
-3. [Technical Stack & Capabilities](#3-technical-stack--capabilities)
-4. [Validation & Test Scenarios](#4-validation--test-scenarios)
-5. [Repository File Index](#5-repository-file-index)
+3. [Validation & Test Scenarios](#4-validation--test-scenarios)
+4. [Repository File Index](#5-repository-file-index)
 
 ---
 
@@ -44,18 +55,8 @@ UI Policies control conditional field visibility and mandatory requirements, whi
 
 The **Incident Handoff Review Dashboard** presents review status distribution, reviews requiring attention, review outcomes, handoff counts, and review aging to support operational monitoring.
 
-## 3. Technical Stack & Capabilities
 
-The application was developed in ServiceNow Studio as a scoped application, using platform configuration and server-side scripting to implement the Incident Handoff Review process.
-
-- **Business Rules:** Evaluate Incident updates and manage IHR creation and counter updates.
-- **UI Actions:** Provide form actions for starting and completing reviews.
-- **UI Policies and Data Policies:** Enforce conditional field visibility, mandatory requirements, and read-only behavior.
-- **Flow Designer:** Automates review assignment, notifications, cancellation, and pending-review reminders.
-- **Application Roles and ACLs:** Control access to IHR records.
-- **Reports and Dashboard:** Present review statuses, outcomes, handoff counts, and aging information for operational visibility.
-
-## 4. Validation & Test Scenarios
+## 3. Validation & Test Scenarios
 
 The application was tested across its core business logic, review lifecycle, automated workflows, and field controls.
 
@@ -66,7 +67,7 @@ The application was tested across its core business logic, review lifecycle, aut
 - **Error Handling:** Tested Business Rule insert and update failure paths and verified that errors were logged as expected.
 - **Access Controls:** Verified that users with the application user role can read and update IHR records but cannot create or delete them, while administrators have all four permissions.
 
-## 5. Repository File Index
+## 4. Repository File Index
 
 The repository is organized by application component. Each folder contains its documentation and, where applicable, the implementation scripts. The testing and evidence folder documents validation scenarios and provides supporting screenshots of key application behaviors and Flow Designer executions.
 
