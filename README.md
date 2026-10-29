@@ -22,8 +22,8 @@ The application was developed in ServiceNow Studio as a scoped application, usin
    - [Review Lifecycle & User Actions](#22-review-lifecycle--user-actions)
    - [Automation & Notifications](#23-automation--notifications)
    - [Access Control & Dashboard Visibility](#24-access-control--dashboard-visibility)
-3. [Validation & Test Scenarios](#4-validation--test-scenarios)
-4. [Repository File Index](#5-repository-file-index)
+3. [Validation & Test Scenarios](#3-validation--test-scenarios)
+4. [Repository File Index](#4-repository-file-index)
 
 ---
 
